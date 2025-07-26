@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Inventory Management System");
-        Label label = new Label("Hello, Devinda! Your project is running 🚀");
+        Label label = new Label("Hello, Your project is running!!!");
         Scene scene = new Scene(label, 400, 200);
         primaryStage.setScene(scene);
         primaryStage.show();
