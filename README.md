@@ -71,61 +71,47 @@ mvn javafx:run
 
 
 5. ### 🧰 How to Use JavaFX Scene Builder in VS Code
-🖌️ 1. Download Scene Builder
-Download from: <br>
-🔗 https://gluonhq.com/products/scene-builder/
 
-Install it normally (Windows .exe, macOS .dmg, or .deb for Linux).
-(When install set file path -->  C:\SceneBuilder\)
+## Scene Builder Setup
 
-Then your task.json file should have the follwing code lines:
-```
-        {
-            "label": "Open login.fxml in Scene Builder",
-            "type": "shell",
-            "command": "C:\\SceneBuilder\\SceneBuilder.exe",
-            "args": [
-                "${workspaceFolder}/src/main/resources/fxml/view/login.fxml"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "never"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Open Current FXML in Scene Builder",
-            "type": "shell",
-            "command": "C:\\SceneBuilder\\SceneBuilder.exe",
-            "args": [
-                "${file}"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "never"
-            },
-            "problemMatcher": []
-        }
+1. **Download Scene Builder**: https://gluonhq.com/products/scene-builder/
+2. **Install** Scene Builder
+3. **Add Scene Builder to PATH** (C:\SceneBuilder\) And **Update tasks.json with your path** <br>
+> 🔴 **IMPORTANT:** When installing Scene Builder, choose this path during setup:  
+> `C:\SceneBuilder\`
 
-```
 
 6. ### 🧩 Link Scene Builder to VS Code
 ```
 1. Open VS Code
 2. Go to Extensions tab
 3. Find: JavaFX Support and After install that Extension
-4. After Press Ctril+Shift+p to open Command Palette
-5. Type: "Tasks: Run Task"
-6. Open Current FXML in Scene Builder
-
-
 ```
 
-7. Open Project using Debugging Option
+7. ### Check tasks.json
+If Scene Builder is not in PATH, update `.vscode/tasks.json`:
+- Find tasks labeled "Open login.fxml in Scene Builder" and "Open Current FXML in Scene Builder"
+- Replace `""SceneBuilder path"` with your correct path like:
+  ```json
+  "command": "C:\\SceneBuilder\\SceneBuilder.exe"
+  ```
+
+
+8. ### Running the Application
+
+🔹 **Build**: `Ctrl+Shift+P` → "Tasks: Run Task" → "maven: package with dependencies" <br>
+🔹 **Run**: `F5` or `Ctrl+Shift+P` → "Debug: Start Debugging" <br>
+🔹 **Edit FXML**: `Ctrl+Shift+P` → "Tasks: Run Task" → "Open login.fxml in Scene Builder" <br>
+
+
+9. ### Finnaly When you need, You Can Run Project using Debugging Option
 ```
 click Run Tab
 After Click Run Without Debugging
 ```
+
+
+
 
 ### 📂 Project Structure
 ```bash
@@ -160,6 +146,17 @@ To run all tests:
 ```bash
 mvn test
 ````
+
+### Troubleshooting
+
+## JavaFX Runtime Missing Error
+- Ensure dependencies are copied: Run "maven: package with dependencies" task first
+- Check launch configuration has proper vmArgs
+
+## Scene Builder Not Opening
+- Verify Scene Builder installation path in tasks.json
+- Ensure Scene Builder is properly installed
+
 
 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
