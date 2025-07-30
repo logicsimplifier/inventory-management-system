@@ -42,16 +42,90 @@ git clone https://github.com/logicsimplifier/inventory-management-system.git
 cd inventory-management-system
 ```
 
-2. ### Build the Project with Maven
+2. ### Install Java & Maven
+Make sure you have Java 17 and Maven installed.
+🔹 Check Java version
+```bash
+java -version
+```
+🔹 Check Maven version
+```bash
+mvn -v
+```
+If not installed, download:
+
+🔹Java: https://jdk.java.net/17/ <br>
+🔹Maven: https://maven.apache.org/download.cgi
+
+
+3. ### Build the Project with Maven
 
 ```bash
 mvn clean install
 ```
 
-3. ### Run the Application (JavaFX GUI)
+4. ### Run the Application (JavaFX GUI)
 ```
 mvn javafx:run
 ````
+
+
+5. ### 🧰 How to Use JavaFX Scene Builder in VS Code
+🖌️ 1. Download Scene Builder
+Download from: <br>
+🔗 https://gluonhq.com/products/scene-builder/
+
+Install it normally (Windows .exe, macOS .dmg, or .deb for Linux).
+(When install set file path -->  C:\SceneBuilder\)
+
+Then your task.json file should have the follwing code lines:
+```
+        {
+            "label": "Open login.fxml in Scene Builder",
+            "type": "shell",
+            "command": "C:\\SceneBuilder\\SceneBuilder.exe",
+            "args": [
+                "${workspaceFolder}/src/main/resources/fxml/view/login.fxml"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open Current FXML in Scene Builder",
+            "type": "shell",
+            "command": "C:\\SceneBuilder\\SceneBuilder.exe",
+            "args": [
+                "${file}"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        }
+
+```
+
+6. ### 🧩 Link Scene Builder to VS Code
+```
+1. Open VS Code
+2. Go to Extensions tab
+3. Find: JavaFX Support and After install that Extension
+4. After Press Ctril+Shift+p to open Command Palette
+5. Type: "Tasks: Run Task"
+6. Open Current FXML in Scene Builder
+
+
+```
+
+7. Open Project using Debugging Option
+```
+click Run Tab
+After Click Run Without Debugging
+```
 
 ### 📂 Project Structure
 ```bash
