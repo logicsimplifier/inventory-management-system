@@ -57,6 +57,11 @@ If not installed, download:
 🔹Java: https://jdk.java.net/17/ <br>
 🔹Maven: https://maven.apache.org/download.cgi
 
+<img width="1919" height="1033" alt="image" src="https://github.com/user-attachments/assets/11b72a58-a184-4bd1-8cd6-a06d5ecf8c4a" />
+
+Maven Setup Video: <br>
+https://www.youtube.com/watch?v=XEphzGQz-nI
+
 
 3. ### Build the Project with Maven
 
@@ -80,6 +85,8 @@ mvn javafx:run
 > 🔴 **IMPORTANT:** When installing Scene Builder, choose this path during setup:  
 > `C:\SceneBuilder\`
 
+Scene Builder install guide video: <br>
+https://www.youtube.com/watch?v=IZCwawKILsk
 
 6. ### 🧩 Link Scene Builder to VS Code
 ```
