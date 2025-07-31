@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventoryapp.controller.DashboardController" prefWidth="900.0" prefHeight="732.0">
+
+    <Label text="Dashboard Page" 
+           layoutX="250" layoutY="180"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+           
+    <Button fx:id="logoutButton" 
+            onAction="#handleLogout"
+            text="Logout" 
+            layoutX="750" layoutY="30"
+            style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5; -fx-cursor: hand;" />
+
+</AnchorPane>
