@@ -125,6 +125,9 @@ After Click Run Without Debugging
 
 Setup SQLite for Youtube video: https://www.youtube.com/watch?v=FsiyOAkC0P4
 
+11. ### Install DB Browser for SQLite
+  Link: https://sqlitebrowser.org/dl/ <br>
+  Setup DB Browser for Youtube video:  https://www.youtube.com/watch?v=o8d38cGb7vY
 
 
 ### 📂 Project Structure
