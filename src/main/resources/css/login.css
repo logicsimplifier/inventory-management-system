@@ -1,121 +1,23 @@
-/* Main container styles */
-.root {
-    -fx-background-color: #f5f7fa;
-}
-
-#loginContainer {
-    -fx-padding: 50;
-}
-
-#loginCard {
-    -fx-fill: white;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 4);
-}
-
-/* Content styles */
-#loginContent {
-    -fx-padding: 40;
-    -fx-alignment: center;
-}
-
-/* Header styles */
-#headerSection {
-    -fx-alignment: center;
-}
-
-#welcomeText {
-    -fx-fill: #4a6baf;
-    -fx-font-size: 24px;
+/* Status label styling */
+.status-label {
+    -fx-font-size: 14px;
     -fx-font-weight: bold;
+    -fx-padding: 10 0;
 }
 
-#welcomeSubtext {
-    -fx-fill: #7a7a7a;
-    -fx-font-size: 14px;
-}
-
-/* Form styles */
-#formSection {
-    -fx-padding: 0 20;
-}
-
-.inputGroup {
-    -fx-alignment: center-left;
-}
-
-.inputLabel {
-    -fx-text-fill: #5a5a5a;
-    -fx-font-size: 14px;
-}
-
-.textField {
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-    -fx-border-color: #e0e0e0;
-    -fx-border-width: 1px;
-    -fx-padding: 10px;
-    -fx-font-size: 14px;
-}
-
-.textField:focused {
-    -fx-border-color: #4a6baf;
-}
-
-/* Options row styles */
-#optionsRow {
-    -fx-alignment: center-left;
-}
-
-#rememberCheck {
-    -fx-text-fill: #5a5a5a;
-}
-
-#forgotPasswordBtn {
-    -fx-background-color: transparent;
-    -fx-text-fill: #4a6baf;
-    -fx-padding: 0;
-    -fx-cursor: hand;
+/* Forgot password button styling */
+.forgot-password-btn:hover {
+    -fx-text-fill: #4a4a9a;
     -fx-underline: true;
 }
 
-/* Button styles */
-#loginBtn {
-    -fx-background-color: #4a6baf;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-background-radius: 5px;
-    -fx-padding: 12px 40px;
-    -fx-cursor: hand;
-    -fx-max-width: infinity;
+/* Sign up button styling */
+.signup-btn:hover {
+    -fx-text-fill: #4a4a9a;
+    -fx-underline: true;
 }
 
-#loginBtn:hover {
-    -fx-background-color: #3a5a9f;
-}
-
-/* Status label */
-.statusLabel {
-    -fx-text-fill: #e74c3c;
-    -fx-font-size: 12px;
-    -fx-wrap-text: true;
-    -fx-max-width: 250px;
-    -fx-alignment: center;
-}
-
-/* Sign up section */
-#signupRow {
-    -fx-alignment: center;
-    -fx-spacing: 5px;
-}
-
-#signupPrompt {
-    -fx-fill: #7a7a7a;
-}
-
-#signupBtn {
-    -fx-background-color: transparent;
-    -fx-text-fill: #4a6baf;
-    -fx-padding: 0;
-    -fx-cursor: hand;
-    -fx-font-weight: bold;
+/* Login button hover effect */
+.login-btn:hover {
+    -fx-background-color: #4a4a9a;
 }
