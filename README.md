@@ -117,6 +117,13 @@ click Run Tab
 After Click Run Without Debugging
 ```
 
+10. ### Download SQLite
+ Link: https://www.sqlite.org/download.html
+
+ <img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/f4b6bd03-23fd-4a2c-8201-ff13149d5eae" />
+ <br>
+
+Setup SQLite for Youtube video: https://www.youtube.com/watch?v=FsiyOAkC0P4
 
 
 
