@@ -82,6 +82,17 @@
           <mainClass>com.inventoryapp.Main</mainClass> <!-- change if your main class path is different -->
         </configuration>
       </plugin>
+
+        <!-- Exec Maven Plugin to run TestDB -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <mainClass>com.inventoryapp.TestDB</mainClass>
+        </configuration>
+      </plugin>
+
     </plugins>
   </build>
 
