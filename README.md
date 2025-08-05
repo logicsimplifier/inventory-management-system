@@ -42,16 +42,93 @@ git clone https://github.com/logicsimplifier/inventory-management-system.git
 cd inventory-management-system
 ```
 
-2. ### Build the Project with Maven
+2. ### Install Java & Maven
+Make sure you have Java 17 and Maven installed.
+🔹 Check Java version
+```bash
+java -version
+```
+🔹 Check Maven version
+```bash
+mvn -v
+```
+If not installed, download:
+
+🔹Java: https://jdk.java.net/17/ <br>
+🔹Maven: https://maven.apache.org/download.cgi
+
+<img width="1919" height="1033" alt="image" src="https://github.com/user-attachments/assets/11b72a58-a184-4bd1-8cd6-a06d5ecf8c4a" />
+
+Maven Setup Video: <br>
+https://www.youtube.com/watch?v=XEphzGQz-nI
+
+
+3. ### Build the Project with Maven
 
 ```bash
 mvn clean install
 ```
 
-3. ### Run the Application (JavaFX GUI)
+4. ### Run the Application (JavaFX GUI)
 ```
 mvn javafx:run
 ````
+
+
+5. ### 🧰 How to Use JavaFX Scene Builder in VS Code
+
+## Scene Builder Setup
+
+1. **Download Scene Builder**: https://gluonhq.com/products/scene-builder/
+2. **Install** Scene Builder
+3. **Add Scene Builder to PATH** (C:\SceneBuilder\) And **Update tasks.json with your path** <br>
+> 🔴 **IMPORTANT:** When installing Scene Builder, choose this path during setup:  
+> `C:\SceneBuilder\`
+
+Scene Builder install guide video: <br>
+https://www.youtube.com/watch?v=IZCwawKILsk
+
+6. ### 🧩 Link Scene Builder to VS Code
+```
+1. Open VS Code
+2. Go to Extensions tab
+3. Find: JavaFX Support and After install that Extension
+```
+
+7. ### Check tasks.json
+If Scene Builder is not in PATH, update `.vscode/tasks.json`:
+- Find tasks labeled "Open login.fxml in Scene Builder" and "Open Current FXML in Scene Builder"
+- Replace `""SceneBuilder path"` with your correct path like:
+  ```json
+  "command": "C:\\SceneBuilder\\SceneBuilder.exe"
+  ```
+
+
+8. ### Running the Application
+
+🔹 **Build**: `Ctrl+Shift+P` → "Tasks: Run Task" → "maven: package with dependencies" <br>
+🔹 **Run**: `F5` or `Ctrl+Shift+P` → "Debug: Start Debugging" <br>
+🔹 **Edit FXML**: `Ctrl+Shift+P` → "Tasks: Run Task" → "Open login.fxml in Scene Builder" <br>
+
+
+9. ### Finnaly When you need, You Can Run Project using Debugging Option
+```
+click Run Tab
+After Click Run Without Debugging
+```
+
+10. ### Download SQLite
+ Link: https://www.sqlite.org/download.html
+
+ <img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/f4b6bd03-23fd-4a2c-8201-ff13149d5eae" />
+ <br>
+
+Setup SQLite for Youtube video: https://www.youtube.com/watch?v=FsiyOAkC0P4
+
+11. ### Install DB Browser for SQLite
+  Link: https://sqlitebrowser.org/dl/ <br>
+  Setup DB Browser for Youtube video:  https://www.youtube.com/watch?v=o8d38cGb7vY
+
 
 ### 📂 Project Structure
 ```bash
@@ -86,6 +163,17 @@ To run all tests:
 ```bash
 mvn test
 ````
+
+### Troubleshooting
+
+## JavaFX Runtime Missing Error
+- Ensure dependencies are copied: Run "maven: package with dependencies" task first
+- Check launch configuration has proper vmArgs
+
+## Scene Builder Not Opening
+- Verify Scene Builder installation path in tasks.json
+- Ensure Scene Builder is properly installed
+
 
 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
