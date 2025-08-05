@@ -1,0 +1,177 @@
+/* CSS Styles for Inventory Management System */
+
+/* Root styling */
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header styling */
+.label {
+    -fx-text-fill: #333333;
+}
+
+/* Form controls styling */
+.text-field, .text-area, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: #007acc;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 122, 204, 0.3), 3, 0, 0, 0);
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #007acc;
+    -fx-text-fill: white;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #005a9e;
+}
+
+.button:pressed {
+    -fx-background-color: #004785;
+}
+
+.button:disabled {
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #666666;
+    -fx-cursor: default;
+}
+
+/* Specific button colors */
+#addButton {
+    -fx-background-color: #28a745;
+}
+
+#addButton:hover {
+    -fx-background-color: #218838;
+}
+
+#updateButton {
+    -fx-background-color: #ffc107;
+    -fx-text-fill: #212529;
+}
+
+#updateButton:hover {
+    -fx-background-color: #e0a800;
+}
+
+#deleteButton {
+    -fx-background-color: #dc3545;
+}
+
+#deleteButton:hover {
+    -fx-background-color: #c82333;
+}
+
+#clearButton {
+    -fx-background-color: #6c757d;
+}
+
+#clearButton:hover {
+    -fx-background-color: #5a6268;
+}
+
+#searchButton {
+    -fx-background-color: #17a2b8;
+}
+
+#searchButton:hover {
+    -fx-background-color: #138496;
+}
+
+/* Table styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.table-view .table-cell {
+    -fx-border-color: #dee2e6;
+    -fx-padding: 8px;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #007acc;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e3f2fd;
+}
+
+/* Status label styling */
+.status-success {
+    -fx-text-fill: #28a745;
+    -fx-font-weight: bold;
+}
+
+.status-error {
+    -fx-text-fill: #dc3545;
+    -fx-font-weight: bold;
+}
+
+.status-info {
+    -fx-text-fill: #17a2b8;
+    -fx-font-weight: normal;
+}
+
+/* VBox and HBox styling */
+.vbox, .hbox {
+    -fx-background-color: white;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+/* Separator styling */
+.separator .line {
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1px 0 0 0;
+}
+
+/* ComboBox specific styling */
+.combo-box .list-cell {
+    -fx-padding: 6px 12px;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+/* Scroll bar styling */
+.scroll-bar {
+    -fx-background-color: #f8f9fa;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #6c757d;
+    -fx-background-radius: 10px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #5a6268;
+}
