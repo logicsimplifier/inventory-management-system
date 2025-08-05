@@ -143,7 +143,7 @@
                         </graphic>
                     </Button>
                     
-                    <Button text="Settings" styleClass="nav-button" onAction="#showSettings">
+                    <Button text="Role Management" styleClass="nav-button" onAction="#showRoleManagement">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
