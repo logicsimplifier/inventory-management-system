@@ -114,4 +114,28 @@ public class LoginController implements Initializable {
             loginStatusLabel.setText("DB Error:"+ e.getMessage());
         }
      }
+
+    @FXML
+    private void handleSignUp(ActionEvent event) {
+        try {
+            // Load register FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/view/register.fxml"));
+            Parent registerRoot = loader.load();
+            
+            // Create new scene
+            Scene registerScene = new Scene(registerRoot);
+            
+            // Get current stage
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            // Set new scene and update window title
+            currentStage.setScene(registerScene);
+            currentStage.setTitle("Inventory Management - Register");
+            currentStage.centerOnScreen();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+            loginStatusLabel.setText("Error loading registration page: " + e.getMessage());
+        }
+    }
 }
