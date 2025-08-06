@@ -13,13 +13,9 @@
 <?import javafx.collections.FXCollections?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
-            fx:controller="com.inventoryapp.controller.DashboardController">
+            fx:controller="com.inventoryapp.controller.DashboardController"
+            stylesheets="@/css/adminDashboard.css">
     <BorderPane fx:id="dashboardPane">
-       
-       <!-- Fixed stylesheet reference -->
-       <stylesheets>
-            <String fx:value="css/adminDashboard.css" />
-        </stylesheets>
 
 
         <!-- Top Navigation Bar -->
@@ -51,7 +47,7 @@
                         <Label text="Admin User" styleClass="user-name"/>
                         <Label text="Administrator" styleClass="user-role"/>
                     </VBox>
-                    <Button styleClass="icon-button">
+                    <Button styleClass="icon-button" onAction="#handleLogout">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
@@ -73,7 +69,7 @@
                         <Insets top="20" right="10" bottom="20" left="10"/>
                     </padding>
                     
-                    <Button text="Dashboard" styleClass="nav-button" onAction="#showDashboard">
+                    <Button text="Dashboard" styleClass="nav-button active" onAction="#showDashboard">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
@@ -83,7 +79,7 @@
                         </graphic>
                     </Button>
                     
-                    <Button text="Inventory" styleClass="nav-button active" onAction="#showInventory">
+                    <Button text="Inventory" styleClass="nav-button " onAction="#showInventory">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
@@ -93,7 +89,7 @@
                         </graphic>
                     </Button>
                     
-                    <Button text="Products" styleClass="nav-button" onAction="#showProducts">
+                    <!-- <Button text="Products" styleClass="nav-button" onAction="#showProducts">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
@@ -101,9 +97,9 @@
                                 </image>
                             </ImageView>
                         </graphic>
-                    </Button>
+                    </Button> -->
                     
-                    <Button text="Categories" styleClass="nav-button" onAction="#showCategories">
+                    <!-- <Button text="Categories" styleClass="nav-button" onAction="#showCategories">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
@@ -112,8 +108,8 @@
                             </ImageView>
                         </graphic>
                     </Button>
-                    
-                    <Button text="Suppliers" styleClass="nav-button" onAction="#showSuppliers">
+                     -->
+                    <!-- <Button text="Suppliers" styleClass="nav-button" onAction="#showSuppliers">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
@@ -122,8 +118,8 @@
                             </ImageView>
                         </graphic>
                     </Button>
-                    
-                    <Button text="Orders" styleClass="nav-button" onAction="#showOrders">
+                     -->
+                    <!-- <Button text="Orders" styleClass="nav-button" onAction="#showOrders">
                         <graphic>
                             <ImageView fitHeight="20" fitWidth="20" preserveRatio="true">
                                 <image>
@@ -131,7 +127,7 @@
                                 </image>
                             </ImageView>
                         </graphic>
-                    </Button>
+                    </Button> -->
                     
                     <Button text="Reports" styleClass="nav-button" onAction="#showReports">
                         <graphic>

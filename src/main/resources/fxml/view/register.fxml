@@ -6,9 +6,38 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.inventoryapp.controller.RegisterController"
-            prefHeight="400.0" prefWidth="600.0">
+<!-- Backend with link:  com.inventoryapp.controller.RegisterController -->
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventoryapp.controller.RegisterController" prefHeight="450.0" prefWidth="600.0">
+
+    <children>
+        <!-- Title -->
+        <Label layoutX="200" layoutY="20" text="Admin Registration Form" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <!-- Username / Email -->
+        <Label layoutX="100" layoutY="80" text="Username / Email:" />
+        <TextField fx:id="usernameField" layoutX="250" layoutY="75" prefWidth="250" />
+
+        <!-- Password -->
+        <Label layoutX="100" layoutY="130" text="Password:" />
+        <PasswordField fx:id="passwordField" layoutX="250" layoutY="125" prefWidth="250" />
+
+        <!-- Confirm Password -->
+        <Label layoutX="100" layoutY="180" text="Phone Number:" />
+        <TextField fx:id="phoneField" layoutX="250" layoutY="175" prefWidth="250" />
+
+        <!-- Secret Code -->
+        <Label layoutX="100" layoutY="230" text="Secret Code:" />
+        <TextField fx:id="secretCodeField" layoutX="250" layoutY="225" prefWidth="250" promptText="Enter secret code" />
+
+        <!-- User Role -->
+        <Label layoutX="100" layoutY="280" text="User Role:" />
+        <ComboBox fx:id="roleComboBox" layoutX="250" layoutY="275" prefWidth="250" disable="true" />
+
+        <!-- Register Button -->
+        <Button fx:id="registerButton" layoutX="250" layoutY="330" text="Register" onAction="#handleRegister" prefWidth="250" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+        <Label fx:id="statusLabel" layoutX="250" layoutY="380" textFill="red" />
+        
+    </children>
 
 </AnchorPane>
