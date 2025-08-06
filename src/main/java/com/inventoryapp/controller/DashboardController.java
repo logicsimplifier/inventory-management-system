@@ -73,7 +73,7 @@ public class DashboardController {
 
     @FXML
     private void showRoleManagement(ActionEvent event) {
-        loadContentView("/fxml/view/roleManagement.fxml", "Role Management");
+        loadContentView("/fxml/view/userRoleManagemnet.fxml", "Role Management");
     }
 
     @FXML
