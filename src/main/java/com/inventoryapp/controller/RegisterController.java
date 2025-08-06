@@ -31,7 +31,7 @@ public class RegisterController {
     private Label statusLabel;
 
     // secret code
-    private static final String SECRET_CODE = "InventoryApp2025";
+    private static final String SECRET_CODE = "InventoryAppUWU";
 
     @FXML
     public void initialize() {
