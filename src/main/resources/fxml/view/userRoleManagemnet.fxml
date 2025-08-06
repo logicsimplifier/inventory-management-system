@@ -11,24 +11,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventoryapp.controller.UserRoleController">
+<AnchorPane prefHeight="600.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inventoryapp.controller.UserRoleController">
 
     <!-- Page Title -->
     <Label layoutX="30.0" layoutY="30.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="User Role Management " />
-   <VBox layoutX="180.0" layoutY="79.0" prefHeight="295.0" prefWidth="396.0">
+   <VBox layoutX="68.0" layoutY="79.0" prefHeight="295.0" prefWidth="686.0">
       <children>
          <VBox prefHeight="128.0" prefWidth="396.0">
 
          <!--text field-->
             <children>
                <Label style="-fx-text-fill: #555; -fx-font-size: 13px; -fx-font-weight: bold;" text="User Name:" />
-               <TextField fx:id="usernameField" layoutX="10.0" layoutY="29.0" prefHeight="43.0" prefWidth="384.0" promptText="Enter your username" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #e0e0e0; -fx-border-width: 1; -fx-padding: 10; -fx-font-size: 14px; -fx-prompt-text-fill: #aaa;" />
+               <TextField fx:id="usernameField" layoutX="10.0" layoutY="29.0" prefHeight="42.0" prefWidth="454.0" promptText="Enter your username" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #e0e0e0; -fx-border-width: 1; -fx-padding: 10; -fx-font-size: 14px; -fx-prompt-text-fill: #aaa;" />
                <VBox prefHeight="82.0" prefWidth="384.0">
 
                <!--Password field-->
                   <children>
                      <Label style="-fx-text-fill: #555; -fx-font-size: 13px; -fx-font-weight: bold;" text="Password:" />
-                     <PasswordField fx:id="passwordField"  prefHeight="43.0" prefWidth="396.0" promptText="Enter your Password" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #e0e0e0; -fx-border-width: 1; -fx-padding: 10; -fx-font-size: 14px; -fx-prompt-text-fill: #aaa;" />
+                     <PasswordField fx:id="passwordField" prefHeight="43.0" prefWidth="396.0" promptText="Enter your Password" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #e0e0e0; -fx-border-width: 1; -fx-padding: 10; -fx-font-size: 14px; -fx-prompt-text-fill: #aaa;" />
                   </children>
                </VBox>
 
@@ -46,7 +46,7 @@
          <!--Add user button-->
          <HBox prefHeight="46.0" prefWidth="396.0">
             <children>
-               <Button mnemonicParsing="false" onAction="#handleAddUser" prefHeight="37.0" prefWidth="396.0" style="-fx-background-color: #2a2a72; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 12 0; -fx-cursor: hand; -fx-effect: -fx-effect;" text="Add User" />
+               <Button mnemonicParsing="false" onAction="#handleAddUser" prefHeight="37.0" prefWidth="396.0" style="-fx-background-color: #3498db; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 12 0; -fx-cursor: hand; -fx-effect: -fx-effect;" text="Add User" textFill="WHITE" />
             </children>
          </HBox>
          <HBox prefHeight="44.0" prefWidth="396.0" />
@@ -63,9 +63,9 @@
    </TableView>
 
    <!--Delete button-->
-   <HBox layoutX="662.0" layoutY="530.0" prefHeight="35.0" prefWidth="124.0">
+   <HBox layoutX="662.0" layoutY="374.0" prefHeight="35.0" prefWidth="94.0">
       <children>
-         <Button onAction="#handleDeleteUser" mnemonicParsing="false" prefHeight="51.0" prefWidth="128.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 12 0; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 1);" text="Delete" />
+         <Button mnemonicParsing="false" onAction="#handleDeleteUser" prefHeight="18.0" prefWidth="99.0" style="-fx-background-color: #e74c3c; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 2; -fx-padding: 6 0; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 1), 10, 0.5, 0, 1);" text="Delete" textFill="WHITE" />
       </children>
    </HBox>
 
