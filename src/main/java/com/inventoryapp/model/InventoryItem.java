@@ -1,5 +1,6 @@
 package com.inventoryapp.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -16,7 +17,8 @@ public class InventoryItem {
     private String supplier;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    
+    private LocalDate addedDate;
+
     // Default constructor
     public InventoryItem() {
         this.createdAt = LocalDateTime.now();
@@ -108,6 +110,14 @@ public class InventoryItem {
         this.updatedAt = updatedAt;
     }
     
+     public LocalDate getAddedDate() {
+        return addedDate;
+    }
+
+    public void setAddedDate(LocalDate addedDate) {
+        this.addedDate = addedDate;
+    }
+
     @Override
     public String toString() {
         return "InventoryItem{" +
