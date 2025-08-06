@@ -18,7 +18,7 @@
    <top>
       <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="35.0" prefWidth="822.0" text="Inventory Management System">
+            <Label text="Inventory Management System" textFill="#0b0e0cff">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
