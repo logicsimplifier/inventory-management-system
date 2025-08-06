@@ -78,29 +78,6 @@ public class DashboardController {
         System.out.println("Inventory content view displayed");
     }
 
-    // @FXML
-    // private void showProducts(ActionEvent event) {
-    //     System.out.println("Products clicked");
-    //     // TODO: Implement products content
-    // }
-
-    // @FXML
-    // private void showCategories(ActionEvent event) {
-    //     System.out.println("Categories clicked");
-    //     // TODO: Implement categories content
-    // }
-
-    // @FXML
-    // private void showSuppliers(ActionEvent event) {
-    //     System.out.println("Suppliers clicked");
-    //     // TODO: Implement suppliers content
-    // }
-
-    // @FXML
-    // private void showOrders(ActionEvent event) {
-    //     System.out.println("Orders clicked");
-    //     // TODO: Implement orders content
-    // }
 
     @FXML
     private void showReports(ActionEvent event) {
