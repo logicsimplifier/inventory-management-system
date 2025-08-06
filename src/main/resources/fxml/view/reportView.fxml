@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.inventoryapp.controller.ReportController"
+      spacing="15.0" prefWidth="800.0" prefHeight="700.0">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- Header Section -->
+    <VBox spacing="5.0">
+        <Label text="Export Reports" styleClass="header-label">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label text="Generate and export inventory reports in CSV or PDF format" styleClass="subtitle-label">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Separator />
+    </VBox>
+
+    <!-- Report Configuration Section -->
+    <VBox spacing="15.0" styleClass="section-box">
+        <Label text="Report Configuration" styleClass="section-title">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <GridPane hgap="15.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints minWidth="150.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
+            </columnConstraints>
+
+            <!-- Report Type -->
+            <Label text="Report Type:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ComboBox fx:id="reportTypeCombo" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <!-- Date Range -->
+            <Label text="Start Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <DatePicker fx:id="startDatePicker" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="End Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <DatePicker fx:id="endDatePicker" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <!-- Category Filter -->
+            <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <ComboBox fx:id="categoryCombo" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <!-- Include Out of Stock -->
+            <Label text="Options:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <CheckBox fx:id="includeOutOfStockCheck" text="Include Out of Stock Items"
+                      GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        </GridPane>
+
+        <!-- Generate Report Button -->
+        <HBox spacing="10.0" alignment="CENTER_LEFT">
+            <Button fx:id="generateReportBtn" text="Generate Report" prefWidth="150.0" styleClass="primary-button">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <ProgressIndicator fx:id="progressIndicator" prefHeight="25.0" prefWidth="25.0" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="statusLabel" text="Ready to generate report" styleClass="status-label" />
+        </HBox>
+    </VBox>
+
+    <!-- Report Preview Section -->
+    <VBox spacing="10.0" styleClass="section-box" VBox.vgrow="ALWAYS">
+        <Label text="Report Preview" styleClass="section-title">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="reportPreviewArea" prefHeight="250.0" editable="false"
+                  wrapText="false" styleClass="preview-area">
+            <font>
+                <Font name="Monospaced" size="12.0" />
+            </font>
+        </TextArea>
+    </VBox>
+
+    <!-- Export Section -->
+    <VBox spacing="10.0" styleClass="section-box">
+        <Label text="Export Options" styleClass="section-title">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+
+        <HBox spacing="15.0" alignment="CENTER_LEFT">
+            <Button fx:id="exportCSVBtn" text="Export as CSV" prefWidth="120.0" styleClass="export-button">
+                <font>
+                    <Font size="12.0" />
+                </font>
+            </Button>
+
+            <Button fx:id="exportPDFBtn" text="Export as PDF" prefWidth="120.0" styleClass="export-button">
+                <font>
+                    <Font size="12.0" />
+                </font>
+            </Button>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <VBox spacing="5.0" alignment="CENTER_RIGHT">
+                <Label fx:id="exportPathLabel" text="" styleClass="export-path-label" wrapText="true" />
+            </VBox>
+        </HBox>
+    </VBox>
+
+</VBox>

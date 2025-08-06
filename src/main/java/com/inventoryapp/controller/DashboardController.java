@@ -101,6 +101,8 @@ public class DashboardController {
     private void showReports(ActionEvent event) {
         System.out.println("Reports clicked");
         setActiveButton(reportsButton);
+        // TODO: Implement reports content
+        loadContentView("/fxml/view/reportView.fxml", "Reports");
     }
 
     @FXML

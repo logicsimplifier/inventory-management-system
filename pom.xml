@@ -51,6 +51,16 @@
       <version>5.10.0</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- PDF Export (iText 7 Core) -->
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>itext7-core</artifactId>
+      <version>7.2.5</version>
+      <type>pom</type>
+    </dependency>
+
+
   </dependencies>
 
 
