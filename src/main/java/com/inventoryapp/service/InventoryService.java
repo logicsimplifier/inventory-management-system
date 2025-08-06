@@ -1,4 +1,4 @@
-package main.java.com.inventoryapp.service;
+package com.inventoryapp.service;
 
 import com.inventoryapp.dao.InventoryDAO;
 import com.inventoryapp.model.InventoryItem;
