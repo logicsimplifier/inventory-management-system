@@ -56,14 +56,14 @@
                 <VBox spacing="10" styleClass="sidebar">
                     <padding><Insets bottom="20" left="10" right="10" top="20" /></padding>
                     <children>
-                  <Button contentDisplay="CENTER" onAction="#showInventory" prefHeight="28.0" prefWidth="97.0" styleClass="nav-button active" text="Dashboard" />
-                        <Button contentDisplay="CENTER" onAction="#showInventory" prefHeight="28.0" prefWidth="97.0" styleClass="nav-button active" text="Inventory" />
-                  <Button contentDisplay="CENTER" onAction="#showInventory" prefHeight="28.0" prefWidth="97.0" styleClass="nav-button active" text="Report" />
+                  <Button contentDisplay="CENTER" onAction="#showDashboard" prefHeight="28.0" prefWidth="107.0" styleClass="nav-button active" text="Dashboard" />
+                        <Button contentDisplay="CENTER" onAction="#showInventory" prefHeight="28.0" prefWidth="107.0" styleClass="nav-button active" text="Inventory" />
+                  <Button fx:id="reportsButton" contentDisplay="CENTER" onAction="#showReports" prefHeight="28.0" prefWidth="107.0" styleClass="nav-button active" text="Report" />
                     </children>
                 </VBox>
 
                 <!-- Main Content -->
-                <StackPane styleClass="content-pane">
+                <StackPane fx:id="dynamicContent" styleClass="content-pane">
                     <children>
                         <VBox fx:id="inventoryView" spacing="20" styleClass="content-view">
                             <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
@@ -82,7 +82,7 @@
                                                 <TextField fx:id="searchField" promptText="Search inventory..." styleClass="search-field" />
                                             </children>
                                         </HBox>
-                                        <Button onAction="#addInventoryItem" styleClass="add-button" text="Add Item" />
+                                        <Button onAction="#showInventory" styleClass="add-button" text="Add Item" />
                                     </children>
                                 </HBox>
 
@@ -90,9 +90,9 @@
                                 <HBox spacing="20" styleClass="summary-cards">
                                     <children>
                                         <VBox alignment="CENTER_LEFT" spacing="5" styleClass="summary-card">
-                                            <Label styleClass="card-title" text="2000" />
+                                            <Label styleClass="card-title" text="20" />
                                             <Label styleClass="card-subtitle" text="Total Items" />
-                                            <Label styleClass="card-footer" text="↓ 12% from last month" />
+                                            <Label styleClass="card-footer" text="↓ 2% from last month" />
                                         </VBox>
                                         <VBox alignment="CENTER_LEFT" spacing="5" styleClass="summary-card">
                                             <Label styleClass="card-title" text="2" />
@@ -100,7 +100,7 @@
                                             <Label styleClass="card-footer" text="↓ 5% from last month" />
                                         </VBox>
                                         <VBox alignment="CENTER_LEFT" spacing="5" styleClass="summary-card">
-                                            <Label styleClass="card-title" text="58,742" />
+                                            <Label styleClass="card-title" text="1020" />
                                             <Label styleClass="card-subtitle" text="Total Value" />
                                             <Label styleClass="card-footer" text="↓ 8% from last month" />
                                         </VBox>
@@ -112,18 +112,18 @@
                                     </children>
                                 </HBox>
 
-                                <!-- Inventory Table -->
-                                <TableView fx:id="inventoryTable" styleClass="inventory-table">
-                                    <columns>
-                                        <TableColumn fx:id="idColumn" text="ID" />
-                                        <TableColumn fx:id="productColumn" text="Product" />
-                                        <TableColumn fx:id="categoryColumn" text="Category" />
-                                        <TableColumn fx:id="stockColumn" text="Stock" />
-                                        <TableColumn fx:id="priceColumn" text="Price" />
-                                        <TableColumn fx:id="statusColumn" text="Status" />
-                                        <TableColumn fx:id="actionsColumn" text="Actions" />
-                                    </columns>
-                                </TableView>
+                                
+                        <!-- Inventory Table -->
+                        <TableView fx:id="inventoryTable" styleClass="inventory-table">
+                            <columns>
+                                <TableColumn text="ID" fx:id="idColumn" styleClass="table-column"/>
+                                <TableColumn text="Product" fx:id="productColumn" styleClass="table-column"/>
+                                <TableColumn text="Category" fx:id="categoryColumn" styleClass="table-column"/>
+                                <TableColumn text="Stock" fx:id="stockColumn" styleClass="table-column"/>
+                                <TableColumn text="Price" fx:id="priceColumn" styleClass="table-column"/>
+                                <TableColumn text="Status" fx:id="statusColumn" styleClass="table-column"/>
+                            </columns>
+                        </TableView>
 
                                 <!-- Pagination -->
                                 <HBox alignment="CENTER_RIGHT" spacing="10">
