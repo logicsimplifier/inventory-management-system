@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Inventory Management System",
+            "request": "launch",
+            "mainClass": "com.inventoryapp.Main",
+            "projectName": "inventory-management",
+            "vmArgs": "--module-path \"${workspaceFolder}/target/dependency\" --add-modules javafx.controls,javafx.fxml",
+            "args": "",
+            "console": "internalConsole",
+            "preLaunchTask": "maven: package with dependencies"
+        },
+        {
+            "type": "java",
+            "name": "Launch with Maven JavaFX Plugin",
+            "request": "launch",
+            "mainClass": "com.inventoryapp.Main",
+            "projectName": "inventory-management",
+            "vmArgs": "--module-path \"${workspaceFolder}/target/dependency\" --add-modules javafx.controls,javafx.fxml --add-opens javafx.fxml/javafx.fxml=ALL-UNNAMED",
+            "args": "",
+            "console": "internalConsole",
+            "preLaunchTask": "maven: package with dependencies"
+        }
+    ]
+}

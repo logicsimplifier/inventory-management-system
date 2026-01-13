@@ -11,7 +11,7 @@
 # IDEs
 .idea/
 *.iml
-.vscode/
+# .vscode/
 
 # OS files
 .DS_Store

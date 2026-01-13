@@ -1,0 +1,179 @@
+/* Admin Dashboard CSS - Working styles with !important declarations */
+
+/* Main colors - Root variables */
+.root {
+    -fx-primary-color: #3498db;
+    -fx-secondary-color: #2ecc71;
+    -fx-danger-color: #e74c3c;
+    -fx-light-color: #ecf0f1;
+    -fx-dark-color: #2c3e50;
+}
+
+/* Top bar - should have dark blue background */
+.top-bar {
+    -fx-background-color: #2c3e50 !important;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* App title - should be white and bold */
+.app-title {
+    -fx-font-size: 20px !important;
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold !important;
+}
+
+.user-name {
+    -fx-font-size: 14px !important;
+    -fx-text-fill: white !important;
+}
+
+.user-role {
+    -fx-font-size: 12px !important;
+    -fx-text-fill: #bdc3c7 !important;
+}
+
+/* Sidebar - should have light gray background */
+.sidebar {
+    -fx-background-color: #ecf0f1 !important;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* Navigation buttons */
+.nav-button {
+    -fx-background-color: transparent !important;
+    -fx-text-fill: #2c3e50 !important;
+    -fx-font-size: 14px !important;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 15;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #dfe6e9 !important;
+}
+
+.nav-button.active {
+    -fx-background-color: #3498db !important;
+    -fx-text-fill: white !important;
+}
+
+/* Content area styling */
+.content-pane {
+    -fx-background-color: white !important;
+}
+
+.content-view {
+    -fx-background-color: white !important;
+}
+
+.content-title {
+    -fx-font-size: 24px !important;
+    -fx-font-weight: bold !important;
+    -fx-text-fill: #2c3e50 !important;
+}
+
+/* Table styling */
+.inventory-table {
+    -fx-font-size: 14px !important;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+/* Status bar - should have light gray background */
+.status-bar {
+    -fx-background-color: #ecf0f1 !important;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-text {
+    -fx-font-size: 12px !important;
+    -fx-text-fill: #7f8c8d !important;
+}
+
+/* Primary button - should be blue */
+.primary-button {
+    -fx-background-color: #3498db !important;
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold !important;
+    -fx-padding: 8 16;
+    -fx-background-radius: 4;
+}
+
+/* Secondary button - should be green */
+.secondary-button {
+    -fx-background-color: #2ecc71 !important;
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold !important;
+    -fx-padding: 8 16;
+    -fx-background-radius: 4;
+}
+
+.icon-button {
+    -fx-background-color: transparent !important;
+    -fx-padding: 5;
+}
+
+.icon-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Stats cards */
+.stats-container {
+    -fx-spacing: 15;
+}
+
+.stat-card {
+    -fx-background-color: white !important;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+    -fx-pref-width: 200;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.stat-value {
+    -fx-font-size: 24px !important;
+    -fx-font-weight: bold !important;
+    -fx-text-fill: #2c3e50 !important;
+}
+
+.stat-label {
+    -fx-font-size: 14px !important;
+    -fx-text-fill: #7f8c8d !important;
+}
+
+.stat-trend {
+    -fx-font-size: 12px !important;
+    -fx-text-fill: #27ae60 !important;
+}
+
+/* Search field */
+.search-field {
+    -fx-prompt-text-fill: #95a5a6 !important;
+    -fx-padding: 5 10 5 30;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-background-color: white !important;
+    -fx-border-color: #bdc3c7;
+}
+
+/* Pagination styling */
+.pagination-label {
+    -fx-font-size: 12px !important;
+    -fx-text-fill: #7f8c8d !important;
+}
+
+.pagination-combo {
+    -fx-background-color: white !important;
+    -fx-border-color: #bdc3c7;
+}
+
+.pagination-control {
+    -fx-background-color: white !important;
+}

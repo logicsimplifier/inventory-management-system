@@ -1,0 +1,64 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "maven: compile",
+            "type": "shell",
+            "command": "mvn",
+            "args": ["compile"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "maven: package with dependencies",
+            "type": "shell",
+            "command": "mvn",
+            "args": ["compile", "dependency:copy-dependencies"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "java: clean workspace",
+            "type": "shell",
+            "command": "mvn",
+            "args": ["clean", "compile", "dependency:copy-dependencies"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open login.fxml in Scene Builder",
+            "type": "shell",
+            "command": "C:\\SceneBuilder\\SceneBuilder.exe",
+            "args": [
+                "${workspaceFolder}/src/main/resources/fxml/view/login.fxml"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open Current FXML in Scene Builder",
+            "type": "shell",
+            "command": "C:\\SceneBuilder\\SceneBuilder.exe",
+            "args": [
+                "${file}"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

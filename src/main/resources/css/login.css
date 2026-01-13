@@ -1,0 +1,23 @@
+/* Status label styling */
+.status-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0;
+}
+
+/* Forgot password button styling */
+.forgot-password-btn:hover {
+    -fx-text-fill: #4a4a9a;
+    -fx-underline: true;
+}
+
+/* Sign up button styling */
+.signup-btn:hover {
+    -fx-text-fill: #4a4a9a;
+    -fx-underline: true;
+}
+
+/* Login button hover effect */
+.login-btn:hover {
+    -fx-background-color: #4a4a9a;
+}
